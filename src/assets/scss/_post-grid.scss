@@ -1,0 +1,91 @@
+.grid-pagination-container{
+    .ant-pagination{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
+
+.header-search-container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    margin-bottom: 20px; /* Add margin for spacing */
+
+    h2 {
+        font-size: 36px;
+        margin-right: 20px; /* Add spacing between header and search bar */
+    }
+
+    .search-bar {
+        border-width: 10px;
+            padding: 20px; /* Increase padding for a larger search bar */
+            width: 40%; /* Adjust the width to your preference */
+            margin: 0 auto; /* Center the search bar horizontally */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 20px; /* Increase font size for better visibility */
+            height: 20px; /* Increase the height for a larger search bar */
+            transition: border-color 0.3s ease;
+        
+        input[type="text"] {
+            border-width: 20px;
+            padding: 20px; /* Increase padding for a larger search bar */
+            width: 90%; /* Adjust the width to your preference */
+            margin: 0 auto; /* Center the search bar horizontally */
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 20px; /* Increase font size for better visibility */
+            height: 60px; /* Increase the height for a larger search bar */
+            transition: border-color 0.3s ease;
+          
+            &:focus {
+              outline: none;
+              border-color: #007bff;
+            }
+          }
+    }
+}
+
+.post-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 30px;
+    grid-auto-rows: 1fr;
+    padding-bottom: 50px;
+
+    figure{
+        height: 100%;
+        max-height: 280px;
+    }
+
+    img{
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center center;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        max-height: 280px;
+    }
+
+    .post-container{
+        display: flex;
+        flex-direction: column;
+
+        .author-text{
+            color: $text-light;
+        }
+
+        a{
+            padding: 0 5px;
+        }
+
+        .description-text{
+            font-size: 18px;
+            font-weight: 400px;
+            color: #555;
+        }
+    }
+}
